@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>E-Cocument</title>
+    <style>
+        body {
+            font-family: 'Cairo'; font-size: 22px;
+        }
+    </style>
+</head>
+<body style="background-image: url('https://i.pinimg.com/564x/a9/82/01/a982013bfe04aa2d7cbe00754a4a2e39.jpg');"
+>
+
+
+<header class="section-header">
+
+        <nav class="navbar navbar-dark navbar-expand p-0 bg-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav d-none d-md-flex mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Cash On Delivery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Free Delivery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Cash Backs</a></li>
+            </ul>
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item">
+                <div class="d-flex flex-row">
+                  <i class="bi bi-person-circle"></i>
+                  <i class="bi bi-person-circle text-white"></i>
+                </div>
+            </li>
+            <li class="nav-item">
+            
+                <a href="#" class="nav-link d-flex align-items-center" data-abc="true"><span>{{request.user}}</span><i class='bx bxs-chevron-down'></i></a>
+            </li>
+            
+          </ul> <!-- list-inline //  -->
+          </div> <!-- navbar-collapse .// -->
+         <!-- container //  -->
+        </nav> <!-- header-top-light.// -->
+        
+        <section class="header-main border-bottom bg-white">
+          <div class="container-fluid">
+               <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+                   <div class="col-md-2">
+                       <img  class="d-none d-md-flex" src="https://miro.medium.com/v2/resize:fit:640/format:webp/0*v8Ot7LRl6TSDXtBR.png" width="70" height="70">
+                   </div>
+                   <div class="col-md-8">
+                <div class="d-flex form-inputs">
+                <input class="form-control" type="text" placeholder="Search any product...">
+                <i class="bx bx-search"></i>
+                </div>
+                   </div>
+                   
+                   <div class="col-md-2">
+                       <div class="d-flex d-none d-md-flex flex-row align-items-center">
+                           <span class="shop-bag"><i class='bx bxs-shopping-bag'></i></span>
+                           <div class="d-flex flex-column ms-2">
+                            <button type="button" class="btn btn-primary position-relative">
+                              <i class="bi bi-cart"></i>
+                              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart">
+                                {{request.session.cart}}
+                                <span class="visually-hidden">unread messages</span>
+                              </span>
+                            </button>
+                           </div>    
+                       </div>           
+                   </div>
+               </div>
+          </div> 
+        </section>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand d-md-none d-md-flex" href="#">Categories</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Electronics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Fashion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Furnitures</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mobiles
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Smart Phones</a></li>
+                    <li><a class="dropdown-item" href="#">Feature Phones</a></li>
+                    <li><a class="dropdown-item" href="#">Mobile Covers</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
+    
+    
+    <main>
+      {%block content%}
+      {%endblock content%}
+
+
+    </main>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+
+
+</body>
+</html>

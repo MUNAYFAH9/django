@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+ 
+{% block content %} 
+
+<div class="card mt-5">
+   <div class="card-body bg-custom d-flex justify-content-center">
+       <div class="mt-5">
+           <form method="post" class="form-group">
+               {% csrf_token %}
+               <label for="id_username" style="color: #E9CAC4;">Username:</label> 
+               <input type="text" name="username" class="form-control" id="id_username">
+
+               <label for="id_email" style="color: #E9CAC4;">Email address:</label> 
+               <input type="email" name="email" class="form-control" id="id_email">
+
+               <label for="id_password1" style="color: #E9CAC4;">Password:</label> 
+               <input type="password" name="password1" class="form-control" id="id_password1">
+
+               <label for="id_password2" style="color: #E9CAC4;">Password confirmation:</label>
+               <input type="password" name="password2" class="form-control" id="id_password2">
+
+               <button class="btn mt-3" type="submit" style="background-color: #E9CAC4; color: #FFFFFF; border-color: #007BFF;">Register</button>
+           </form>
+       </div>
+   </div>
+</div>
+
+{% endblock %}

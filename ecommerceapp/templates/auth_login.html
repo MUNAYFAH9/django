@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+ 
+{% block content %} 
+  
+<div class="card mt-5">
+   <div class="card-body bg-custom d-flex justify-content-center"> <!-- Changed bg-secondary to bg-custom -->
+       <div class="mt-5">
+           <form method="post" class="form-group">
+               {% csrf_token %}
+               <label for="username" style="color: #E9CAC4;">Username:</label>
+               <input type="text" name="username" id="username" class="form-control" style="color: #000000;"> <!-- Change color for username input -->
+               <label for="password" style="color: #E9CAC4;">Password:</label>
+               <input type="password" name="password" id="password" class="form-control" style="color: #000000;"> <!-- Change color for password input -->
+
+
+               <div class="pt-2">
+                   <strong style="color: #E9CAC4;">You Don't have an account! <a href="{% url 'auth_register' %}" style="color: #FFFFFF;">SignIn</a></strong> <!-- Changed text color to white -->
+               </div>
+
+               <button class="btn mt-3" type="submit">Login</button>
+           </form>
+       </div>
+   </div>
+</div>
+
+ 
+{% endblock %}

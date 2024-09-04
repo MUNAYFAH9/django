@@ -1,0 +1,66 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="container">
+
+    <div class="row text-center d-flex justify-content-center mt-5">
+    <h3 class="'text-conter text-danger badge bg-success">لاتفوت عروض الصيف</h3>
+    <span>تسوق معنا بخصومات 20%</span>
+        <div class="col-sm-3">
+            <div class="card border border-dagnger">
+                <div class="card-body ">
+                    <i class="bi bi-laptop" style="font-size: 50px;"></i>
+                    <h4>الهواتف الذكية</h4>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-3">
+            <a href="{% url 'listitems' %}">
+                <div class="card border border-dagnger">
+                    <div class="card-boody ">
+                        <i class="bi bi-person-standing" style="font-size: 60px;"></i>
+                        <h4>الملابس </h4>
+    
+    
+                    </div>
+                </div>     
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+    <!--قسم ثاني تحت -->
+    <div class="row text-center d-flex justify-content-center mt-5">
+        <h3 class="'text-conter text-danger badge bg-success">قسم ثاني تحت   </h3>
+        <span>تسوق معنا بخصومات 20%</span>
+            <div class="col-sm-3">
+                <div class="card border border-dagnger">
+                    <div class="card-boody ">
+                        <i class="bi bi-phone text-success" style="font-size: 60px;"></i>
+                        <h4>الهواتف الذكية</h4>
+    
+    
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-sm-3">
+                <div class="card border border-dagnger">
+                    <div class="card-boody ">
+                        <i class="bi bi-person-standing" style="font-size: 60px;"></i>
+                        <h4>الملابس </h4>
+    
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+</div>
+{%endblock content%}
